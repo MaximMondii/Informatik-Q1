@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=QueueGUI
+comment1.params=
+comment1.target=QueueGUI()
+comment1.text=\r\n\ Ein\ Konstruktor\ ohne\ Parameter<br>\r\n\ Intern\ wird\ ein\ anderer\ Konstruktor\ aufgerufen,\r\n\ der\ einen\ Parameter\ erwartet.\ Diesem\ wird\ der\r\n\ Parameter\ 0\ uebergeben.\r\n
+comment2.params=nr
+comment2.target=QueueGUI(int)
+comment2.text=\r\n\ Ein\ Konstruktor\ mit\ Parameter<br>\r\n\ Der\ Parameter\ gibt\ an,\ wo\ die\ GUI\ auf\ dem\r\n\ Bildschirm\ erscheinen\ soll.<br>\r\n\ Wenn\ der\ Parameter\ 0\ ist,\ erscheint\ die\ GUI\ oben.<br>\r\n\ Wenn\ der\ Parameter\ 1\ ist,\ erscheint\ die\ GUI\ in\ der\ Mitte.<br>\r\n\ Wenn\ der\ Parameter\ 2\ ist,\ erscheint\ die\ GUI\ unten.\r\n\ \r\n\ @param\ nr\ die\ Kennzahl\ fuer\ die\ Bildschirmposition\r\n
+comment3.params=gui
+comment3.target=void\ guiAnmelden(QueueGUI)
+comment3.text=\r\n\ Mit\ dieser\ Methode\ kann\ eine\ andere\ Instanz\ der\r\n\ Klasse\ QueueGUI\ angemeldet\ werden.<br>\r\n\ Damit\ ist\ es\ z.B.\ moeglich,\ zwei\ Queues\ zu\ verwalten\r\n\ und\ mithilfe\ einer\ Methode\ zu\ verknuepfen.\r\n\ \r\n\ @param\ gui\ die\ andere\ GUI\r\n
+comment4.params=queue
+comment4.target=void\ queueAnmelden(Queue)
+comment4.text=\r\n\ Mit\ dieser\ Methode\ kann\ eine\ extern\ erzeugte\r\n\ Queue\ angemeldet\ werden.<br>\r\n\ Die\ Queue\ wird\ in\ dem\ Attribut\ myQueue\ gespeichert.\r\n\ \r\n\ @param\ queue\ die\ Queue,\ die\ angemeldet\ werden\ soll.\r\n
+comment5.params=pContentVisibility
+comment5.target=void\ inhalteAnzeigen(boolean)
+numComments=6

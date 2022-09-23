@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Verkehrskontrolle
+comment0.text=\r\n\ Die\ Verkehrskontrolle\ stellt\ eine\ m\u00F6gliche\ L\u00F6sung\ der\ Aufgabenstellung\ auf\ Seite\ 65\ dar\r\n\ \r\n\ @author\ (Ruth\ Bosbach)\ \r\n\ @version\ (1.0)\r\n
+comment1.params=maxUntauglichkeit\ maxKontrolliert
+comment1.target=Verkehrskontrolle(int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Verkehrskontrolle\r\n
+comment2.params=t
+comment2.target=void\ setTaktgeber(TAKTGEBER)
+comment3.params=pFahrzeug
+comment3.target=void\ einreihen(Fahrzeug)
+comment4.params=
+comment4.target=Fahrzeug\ kolonneHead()
+comment5.params=
+comment5.target=Fahrzeug\ seitenstreifenHead()
+comment6.params=
+comment6.target=void\ taktimpulsAusfuehren()
+comment6.text=\r\n\ taktimpulsAusfuehren\r\n
+comment7.params=
+comment7.target=void\ herauswinken()
+comment8.params=
+comment8.target=void\ kolonneAufloesen()
+comment9.params=
+comment9.target=void\ seitenstreifenAufloesen()
+numComments=10

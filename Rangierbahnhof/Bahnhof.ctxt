@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Bahnhof
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Bahnhof.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Bahnhof()
+comment2.params=Zug
+comment2.target=void\ aufGleisASchmei\u00DFen(Zug)
+numComments=3

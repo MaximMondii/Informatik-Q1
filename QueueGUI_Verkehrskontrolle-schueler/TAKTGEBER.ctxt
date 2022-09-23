@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=TAKTGEBER
+comment0.text=\r\n\ Zeitkontrolle\ der\ Queue\r\n\ \r\n\ @author\ Klaus\ van\ Dijkstran\ und\ Barbara\ Leidorn\r\n\ @version\ 1.0\r\n
+comment1.params=obj
+comment1.target=TAKTGEBER(Verkehrskontrolle)
+comment1.text=\r\n\ Erzeugt\ den\ Taktgeber\ und\ tr&auml;gt\ als\ Parameter\ den\ Taktempf&auml;nger\ ein.\r\n\ @param\ planSys\ der\ zu\ bedienende\ Taktempf&auml;nger\r\n
+comment2.params=
+comment2.target=TAKTGEBER()
+comment3.params=evt
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.text=\r\n\ vom\ Timer\ aufgerufen\r\n\ erh&ouml;ht\ die\ Simulationszeit\ und\ benachrichtigt\ alle\ eingetragenen\ Objekte\r\n\ @param\ evt\ der\ Timerevent\r\n
+comment4.params=
+comment4.target=void\ Starten()
+comment4.text=\r\n\ Timer\ starten\r\n
+comment5.params=
+comment5.target=void\ Anhalten()
+comment5.text=\r\n\ Timer\ anhalten\r\n
+comment6.params=dauer
+comment6.target=void\ TaktdauerSetzen(int)
+comment6.text=\r\n\ Ablaufgeschwindigkeit\ einstellen\r\n\ \r\n\ @param\ dauer\:\ Angabe\ in\ Millisekunden\r\n
+numComments=7
