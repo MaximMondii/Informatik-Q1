@@ -4,7 +4,7 @@ import java.awt.event.*;
 /**
  * Write a description of class PalindromPrueferGUI here.
  * 
- * @author (Ruth Bosbach) 
+ * @author () 
  * @version (1.0)
  */
 public class PalindromPrueferGUI extends JFrame
