@@ -10,6 +10,7 @@ public class Bahnhof
     private Stack<Zug> A;
     private Stack<Zug> B;
     private Stack<Zug> C;
+    private int kleinsteZahl;
     public Bahnhof()
     {
         A = new Stack<Zug>();
@@ -20,33 +21,39 @@ public class Bahnhof
     {
         A.push(Zug);
     }
-    /*public void sortieren()
-    {
-        C.push(A.top());
-        A.pop();
-        while(!A.isEmpty())
-        {   
-            if(C.isEmpty())
+    public void sortieren(){
+        Stack<Zug> start = A;
+        Stack<Zug> rangier = B;
+        Stack<Zug> ziel = C;
+        
+        
+        ziel.push(start.top());
+        start.pop();
+        while(!start.isEmpty())
+        {
+            while(start.top().getNummer() < ziel.top().getNummer())
             {
-                C.push(A.top());
-                A.pop();
-            }
-            if(A.top().getNummer() < C.top().getNummer())
-            {
-                C.push(A.top());
-                A.pop();
-            }
-            else
-            {
-                B.push(C.top());
-                C.pop();
-                while(!B.isEmpty())
+                rangier.push(ziel.top());
+                ziel.pop();
+                if(ziel.isEmpty())
                 {
-                    C.push(B.top());
-                    B.pop();
+                    ziel.push(start.top());
+                    start.pop();  
                 }
+            }
+            if(!rangier.isEmpty())
+            {
+                if(start.top().getNummer() < rangier.top().getNummer())
+                {
+                    ziel.push(start.top());
+                    start.pop();
+                }
+            }
+            while(!rangier.isEmpty())
+            {
+                ziel.push(rangier.top());
+                rangier.pop();
             }
         }
     }
-        **/
 }

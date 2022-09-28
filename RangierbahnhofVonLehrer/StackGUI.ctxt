@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=StackGUI
+comment1.params=
+comment1.target=StackGUI()
+comment1.text=\r\n\ Ein\ Konstruktor\ ohne\ Parameter<br>\r\n\ Intern\ wird\ ein\ anderer\ Konstruktor\ aufgerufen,\r\n\ der\ einen\ Parameter\ erwartet.\ Diesem\ wird\ der\r\n\ Parameter\ 0\ uebergeben.\r\n
+comment2.params=nr
+comment2.target=StackGUI(int)
+comment2.text=\r\n\ Ein\ Konstruktor\ mit\ Parameter<br>\r\n\ Der\ Parameter\ gibt\ an,\ wo\ die\ GUI\ auf\ dem\r\n\ Bildschirm\ erscheinen\ soll.<br>\r\n\ Wenn\ der\ Parameter\ 0\ ist,\ erscheint\ die\ GUI\ links.<br>\r\n\ Wenn\ der\ Parameter\ 1\ ist,\ erscheint\ die\ GUI\ in\ der\ Mitte.<br>\r\n\ Wenn\ der\ Parameter\ 2\ ist,\ erscheint\ die\ GUI\ rechts.\r\n\ \r\n\ @param\ nr\ die\ Kennzahl\ fuer\ die\ Bildschirmposition\r\n
+comment3.params=gui
+comment3.target=void\ guiAnmelden(StackGUI)
+comment3.text=\r\n\ Mit\ dieser\ Methode\ kann\ eine\ andere\ Instanz\ der\r\n\ Klasse\ StackGUI\ angemeldet\ werden.<br>\r\n\ Damit\ ist\ es\ z.B.\ moeglich,\ zwei\ Stacks\ zu\ verwalten\r\n\ und\ mithilfe\ einer\ Methode\ zu\ verknuepfen.\r\n\ \r\n\ @param\ gui\ die\ andere\ GUI\r\n
+comment4.params=stack
+comment4.target=void\ stackAnmelden(Stack)
+comment4.text=\r\n\ Mit\ dieser\ Methode\ kann\ ein\ extern\ erzeugter\r\n\ Stack\ angemeldet\ werden.<br>\r\n\ Der\ Stack\ wird\ in\ dem\ Attribut\ myStack\ gespeichert.\r\n\ \r\n\ @param\ stack\ der\ Stack,\ die\ angemeldet\ werden\ soll.\r\n
+comment5.params=pContentVisibility
+comment5.target=void\ inhalteAnzeigen(boolean)
+comment6.params=
+comment6.target=Stack\ gibMyStack()
+comment6.text=\r\n\ Der\ Stack\ dieser\ GUI\ wird\ zurueck\ gegeben.\r\n\ \r\n\ @return\ der\ Stack\r\n
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+comment7.text=\r\n\ Die\ main-Methode\ ruft\ den\ parameterlosen\ Konstruktor\r\n\ der\ Klasse\ StackGUI\ auf.\ Das\ Fenster\ erscheint\ in\ der\r\n\ Mitte\ des\ Bildschirms.\r\n
+numComments=8
