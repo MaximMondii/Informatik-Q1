@@ -22,77 +22,33 @@ public class Bahnhof
         A.push(Zug);
     }
     public void sortieren(){
-        while(!A.isEmpty() && !B.isEmpty()){
-            kleinsteZahl = A.top().getNummer();
-            B.push(A.top());
-            A.pop();
-            while(!A.isEmpty()){
-                if(kleinsteZahl > A.top().getNummer())
-                {
-                    kleinsteZahl = A.top().getNummer();
-                    B.push(A.top());
-                    A.pop();
-                }else
-                {   
-                    B.push(A.top()); 
-                    A.pop();
-                }
-            }
-            while(!B.isEmpty()){
-                if(kleinsteZahl == B.top().getNummer())
-                {
-                    C.push(B.top());
-                    B.pop();
-                }else
-                {
-                 A.push(B.top());
-                 B.pop();
-                }
-            }
-        }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*public void sortieren()
-    {
         C.push(A.top());
         A.pop();
         while(!A.isEmpty())
-        {   
-            if(C.isEmpty())
+        {
+            while(A.top().getNummer() < C.top().getNummer())
             {
-                C.push(A.top());
-                A.pop();
-            }
-            if(A.top().getNummer() < C.top().getNummer())
-            {
-                C.push(A.top());
-                A.pop();
-            }
-            else
-            {
-                B.push(C.top());
+                A.push(C.top());
                 C.pop();
-                while(!B.isEmpty())
+                if(C.isEmpty())
                 {
-                    C.push(B.top());
-                    B.pop();
+                    C.push(A.top());
+                    A.pop();  
                 }
+            }
+            if(!B.isEmpty())
+            {
+                if(A.top().getNummer() < B.top().getNummer())
+                {
+                    C.push(A.top());
+                    A.pop();
+                }
+            }
+            while(!B.isEmpty())
+            {
+                C.push(B.top());
+                B.pop();
             }
         }
     }
-        **/
 }
