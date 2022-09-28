@@ -22,32 +22,37 @@ public class Bahnhof
         A.push(Zug);
     }
     public void sortieren(){
-        C.push(A.top());
-        A.pop();
-        while(!A.isEmpty())
+        Stack<Zug> start = A;
+        Stack<Zug> rangier = B;
+        Stack<Zug> ziel = C;
+        
+        
+        ziel.push(start.top());
+        start.pop();
+        while(!start.isEmpty())
         {
-            while(A.top().getNummer() < C.top().getNummer())
+            while(start.top().getNummer() < ziel.top().getNummer())
             {
-                A.push(C.top());
-                C.pop();
-                if(C.isEmpty())
+                rangier.push(ziel.top());
+                ziel.pop();
+                if(ziel.isEmpty())
                 {
-                    C.push(A.top());
-                    A.pop();  
+                    ziel.push(start.top());
+                    start.pop();  
                 }
             }
-            if(!B.isEmpty())
+            if(!rangier.isEmpty())
             {
-                if(A.top().getNummer() < B.top().getNummer())
+                if(start.top().getNummer() < rangier.top().getNummer())
                 {
-                    C.push(A.top());
-                    A.pop();
+                    ziel.push(start.top());
+                    start.pop();
                 }
             }
-            while(!B.isEmpty())
+            while(!rangier.isEmpty())
             {
-                C.push(B.top());
-                B.pop();
+                ziel.push(rangier.top());
+                rangier.pop();
             }
         }
     }
