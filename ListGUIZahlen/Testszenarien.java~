@@ -1,0 +1,34 @@
+ /**
+ * Kurzbeschreibung der Klasse Testszenarien:
+ * ...
+ * @author (Ihr Name) 
+ * @version (Versions Nummer oder Datum)
+ */
+public class Testszenarien 
+{
+//=========== Klassen-Attribute und -Methoden ==========  
+  public static List<LED> testLichterkette = new List<LED>();
+
+//=========== Objekt-Attribute =========================  
+
+
+//=========== Konstruktor(en) ==========================  
+  /**
+   * Default-Konstruktor f?r Objekte der Klasse Testszenarien
+   */
+  public Testszenarien()
+  {  
+    //Objektvariablen initialisieren  
+  }
+//=========== Objekt-Methoden ==========================  
+
+  public static List<LED> gibDreierLEDKette(){
+    testLichterkette.append(new LED());
+    testLichterkette.append(new LED());
+    testLichterkette.append(new LED());
+    
+    return testLichterkette;
+    
+  }
+
+} // Ende der Klasse Testszenarien
