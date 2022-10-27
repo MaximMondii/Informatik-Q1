@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=ZahlList
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ZahlList\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=ZahlList()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ZahlList\r\n
+comment2.params=
+comment2.target=List\ getList()
+comment2.text=\r\n\ Methode,\ die\ eine\ Referenz\ auf\ die\ in\ der\ ZahlList\ gespeicherte\r\n\ Liste\ zur\u00FCckgibt,\ damit\ diese\ an\ der\ ListGUI\ angemeldet\ werden\ kann\r\n
+comment3.params=
+comment3.target=void\ zahlenlisteFuellen()
+comment3.text=\r\n\ F\u00FClle\ die\ List\ zahlenliste\ mit\ diesem\ Methodenaufrufe\r\n\ mit\ den\ Werten\ 3,\ 5,\ 6\ ,7\ in\ dieser\ Reihenfolge\r\n
+comment4.params=z
+comment4.target=void\ zahlSortiertEinfuegenB(Zahl)
+comment4.text=\r\n\ Wir\ wollen\ auf\ der\ gef\u00FCllten\ Zahlen\ Liste\ den\ Wert\ \r\n\ 4\ zwischen\ die\ 3\ und\ die\ 5\ einsortieren.\r\n\ Diese\ Aufgabe\ kann\ mit\ einem\ unterschiedlichen\ Schwierigkeitsgrad\r\n\ gel\u00F6st\ werden\r\n\ a)\ einfach\:\ die\ 4\ wird\ an\ die\ zweite\ Stelle\ gesetzt\r\n\ /\r\n\ \ \ \ \ public\ void\ zahlSortiertEinfuegenA(){\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ }\r\n\ \ \ \ /**\r\n\ b)\ schwieriger\:\ die\ Liste\ wird\ durchsucht,\ bis\ der\ richtige\ Platz\ zum\ \r\n\ einsortieren\ in\ der\ Liste\ gefunden\ wurde.\ \r\n\ \r\n\ Dazu\ muss\ der\ Wert\ als\ Parameter\ \u00FCbergeben\ werden.\r\n
+comment5.params=z
+comment5.target=void\ loescheZahl(Zahl)
+comment5.text=\r\n\ Die\ als\ Parameter\ \u00FCbergebene\ Zahl\ z\ soll\ gel\u00F6scht\ werden.\r\n\ Erstellen\ Sie\ hierzu\ ein\ Struktogramm\ (Buch\ S.\ 361)oder\ einen\ Ablaufplan\r\n\ Tipp\:\ remove()\ l\u00F6scht\ den\ current,\ falls\ es\ einen\ current\ gibt.\ Ansonsten\ bleibt\ die\ Liste\ unver\u00E4ndert.\r\n
+comment6.params=
+comment6.target=void\ listeAusgeben()
+comment6.text=\r\n\ Alle\ Zahlen\ sollen\ in\ ihrer\ Reihenfolge\ auf\ der\ Konsole\ ausgegeben\ werden\r\n\ Benutzen\ Sie\ hier\ die\ Methode\ System.out.println\r\n
+numComments=7

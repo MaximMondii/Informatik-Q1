@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Starter
+comment0.text=\r\n\ Klasse\ Starter\ \r\n\r\n\ @version\ 2013-02-16\ (v\ 1.0)\r\n\ @author\ Rudolf\ Silberberg\r\n
+comment1.params=title
+comment1.target=Starter(java.lang.String)
+comment2.params=evt
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=evt
+comment3.target=void\ bStart_ActionPerformed(java.awt.event.ActionEvent)
+comment4.params=bg
+comment4.target=java.lang.String\ getSelectedRadioButton(javax.swing.ButtonGroup)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

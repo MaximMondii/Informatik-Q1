@@ -1,0 +1,80 @@
+/**
+ * Kurzbeschreibung der Klasse Steuerung:
+ * ...
+ * @author (Ihr Name) 
+ * @version (Versions Nummer oder Datum)
+ */
+public class Steuerung 
+{
+  //=========== Klassen-Attribute und -Methoden ==========  
+
+  //=========== Objekt-Attribute =========================  
+  private int anzahlLEDs = 0;
+  private List<LED> lichterkette;
+
+  //=========== Konstruktor(en) ==========================  
+  /**
+   * Default-Konstruktor f?r Objekte der Klasse Steuerung
+   */
+  public Steuerung()
+  {  
+    //Objektvariablen initialisieren  
+    lichterkette = new List<LED>();
+  }
+  //=========== Objekt-Methoden ==========================  
+  public int getAnzahlLEDs(){
+    return anzahlLEDs;
+  }
+
+  public void leuchten01(){
+
+    lichterkette.toFirst();
+    while(lichterkette.hasAccess()){
+      LED led = lichterkette.getContent();
+      led.lichtAn();
+      lichterkette.next();
+    }
+
+  }
+
+  public void leuchten02(){
+    int aktuelleLED = 0;
+    LED led = null;
+    lichterkette.toFirst();
+    while(lichterkette.hasAccess()){
+      led = lichterkette.getContent();
+      aktuelleLED++;
+      if(aktuelleLED%2 == 0){
+        led.lichtAn();
+      }
+      else{
+        led.lichtAus();
+      }
+      lichterkette.next();
+    }
+  }
+
+    public void lichterketteAnhaengen(List<LED> pLichterkette){
+
+      int anzahlNeueLEDs = 0;
+      pLichterkette.toFirst();
+      while(pLichterkette.hasAccess()){
+        anzahlNeueLEDs++;
+        lichterkette.append(pLichterkette.getContent());
+        pLichterkette.next();
+      }
+
+      anzahlLEDs = anzahlLEDs + anzahlNeueLEDs;
+
+    }
+
+    public void lichterketteAnzeigen(){
+      lichterkette.toFirst();
+      while(lichterkette.hasAccess()){
+        LED led = lichterkette.getContent();
+        System.out.println(led);
+        lichterkette.next();
+      }
+    }
+
+  } // Ende der Klasse Steuerung

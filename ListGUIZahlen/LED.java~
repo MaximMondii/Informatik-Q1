@@ -1,0 +1,43 @@
+ /**
+ * Kurzbeschreibung der Klasse LED:
+ * ...
+ * @author (Ihr Name) 
+ * @version (Versions Nummer oder Datum)
+ */
+public class LED 
+{
+//=========== Klassen-Attribute und -Methoden ==========  
+
+
+//=========== Objekt-Attribute =========================  
+  private boolean leuchtet;
+
+//=========== Konstruktor(en) ==========================  
+  /**
+   * Default-Konstruktor f?r Objekte der Klasse LED
+   */
+  public LED()
+  {  
+    //Objektvariablen initialisieren  
+    leuchtet = false;
+  }
+//=========== Objekt-Methoden ==========================  
+
+public void lichtAn(){
+  leuchtet = true;
+  
+}
+
+public void lichtAus(){
+  leuchtet = false;
+}
+
+public String toString(){
+  if (leuchtet){
+    return "AN";
+  }
+  else{
+    return "AUS";
+  }
+}
+} // Ende der Klasse LED
