@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Personenmanager
+comment1.params=
+comment1.target=Personenmanager()
+comment2.params=pPerson
+comment2.target=void\ hinzuf\u00FCgen(Person)
+numComments=3
