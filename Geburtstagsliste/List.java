@@ -100,7 +100,7 @@ public class List<ContentType> {
         current = null;
 
     }
-
+    
     /**
      * Die Anfrage liefert den Wert true, wenn die Liste keine Objekte enthaelt,
      * sonst liefert sie den Wert false.

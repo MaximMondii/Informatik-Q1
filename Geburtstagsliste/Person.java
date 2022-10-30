@@ -5,12 +5,11 @@ import java.util.Calendar;
 
 public class Person
 {
-    private String name;
-    private String geschlecht; 
+    private String name; 
     private Date geburtstag;
     Calendar calendar = new GregorianCalendar();
     SimpleDateFormat dateFormat = new SimpleDateFormat("d MMMM, yyyy");
-    public Person(String pName, String pGeschlecht, String Datum)
+    public Person(String pName, String Datum)
     {
         String tag = Datum.substring(0, 2);
         String monat = Datum.substring(3, 5);
@@ -21,15 +20,10 @@ public class Person
         calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(tag));
         geburtstag = calendar.getTime();
         name = pName; 
-        geschlecht = pGeschlecht;
     }
     public String getName()
     {
         return name;
-    }
-    public String getGeschlecht()
-    {
-        return geschlecht;
     }
     public void DateMitPrintln()
     {
@@ -42,7 +36,8 @@ public class Person
     @Override
     public String toString()
     {
-        String m = name + " hat am " + geburtstag + " Geburtstag.";
+        String newline = System.getProperty("line.separator");
+        String m = name + newline + dateFormat.format(calendar.getTime());
         return m;
     }
 }

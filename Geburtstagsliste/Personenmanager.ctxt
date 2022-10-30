@@ -2,6 +2,13 @@
 comment0.target=Personenmanager
 comment1.params=
 comment1.target=Personenmanager()
-comment2.params=pPerson
-comment2.target=void\ hinzuf\u00FCgen(Person)
-numComments=3
+comment2.params=
+comment2.target=List\ getList()
+comment2.text=\r\n\ Methode,\ die\ eine\ Referenz\ auf\ die\ in\ der\ ZahlList\ gespeicherte\r\n\ Liste\ zur\u00FCckgibt,\ damit\ diese\ an\ der\ ListGUI\ angemeldet\ werden\ kann\r\n
+comment3.params=pName\ Datum
+comment3.target=void\ erstellenUndHinzuf\u00FCgen(java.lang.String,\ java.lang.String)
+comment4.params=pPerson
+comment4.target=void\ hinzuf\u00FCgen(Person)
+comment5.params=pName
+comment5.target=void\ entfernen(java.lang.String)
+numComments=6

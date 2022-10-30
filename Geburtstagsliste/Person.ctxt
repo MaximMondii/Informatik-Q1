@@ -1,15 +1,13 @@
 #BlueJ class context
 comment0.target=Person
-comment1.params=pName\ pGeschlecht\ Datum
-comment1.target=Person(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=pName\ Datum
+comment1.target=Person(java.lang.String,\ java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ getName()
 comment3.params=
-comment3.target=java.lang.String\ getGeschlecht()
+comment3.target=void\ DateMitPrintln()
 comment4.params=
-comment4.target=void\ DateMitPrintln()
+comment4.target=java.util.Date\ getDate()
 comment5.params=
-comment5.target=java.util.Date\ getDate()
-comment6.params=
-comment6.target=java.lang.String\ toString()
-numComments=7
+comment5.target=java.lang.String\ toString()
+numComments=6
