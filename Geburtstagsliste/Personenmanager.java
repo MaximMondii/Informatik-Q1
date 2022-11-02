@@ -13,7 +13,6 @@ public class Personenmanager
      */
     public List<Person> getList()
     {
-        // put your code here
         return geburtstagsliste;
     }
 
@@ -22,7 +21,7 @@ public class Personenmanager
         Person person = new Person(pName, Datum);
         geburtstagsliste.insert(person);
     }
-
+    
     public void hinzufügen(Person pPerson)
     {
         geburtstagsliste.insert(pPerson);

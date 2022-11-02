@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=WortGeneratorDatei
+comment0.text=\r\n\ Die\ Klasse\ stellt\ Methoden\ zur\ Verwaltung\ der\ Wortlisten\ zur\ Verfuegung.\r\n\ \r\n\ @author\ Rudolf\ Silberberg\r\n\ @version\ 20081203\r\n
+comment1.params=dN
+comment1.target=WortGeneratorDatei(java.lang.String)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ WortGeneratorDatei.\r\n\ \r\n\ @param\ \ \ dN\ Name\ der\ Wortdatei\r\n
+comment2.params=
+comment2.target=WortGeneratorDatei()
+comment2.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ WortLieferant.\r\n\ Als\ Dateiname\ wird\ "woerterbuch.txt\ gesetzt\ und\ der\ ueberlade\ Konstruktor\ aufgerufen.\r\n
+comment3.params=wB
+comment3.target=void\ setzeWoerterbuch(java.lang.String)
+comment3.text=\r\n\ Mit\ dieser\ Methode\ kann\ der\ Dateiname\ eines\ Woerterbuchs\ gesetzt\ werden.\r\n\ \r\n\ @param\ \ \ wB\ Ein\ String,\ welcher\ den\ Namen\ des\ Woerterbuchs\ enthaelt.\r\n
+comment4.params=
+comment4.target=java.lang.String\ gibWoerterbuch()
+comment4.text=\r\n\ Die\ Methode\ gibt\ den\ Dateinamen\ des\ aktuellen\ Woerterbuches\ zurueck.\r\n\ \r\n\ @return\ \ \ Dateiname\ des\ Woerterbuches\r\n
+comment5.params=
+comment5.target=java.lang.String\ liefereWort()
+comment5.text=\r\n\ Die\ Methode\ gibt\ ein\ zufaellig\ ausgewaehltes\ Wort\ aus\ dem\ Woerterbuch\ zurueck.\r\n\ Unabhaengig\ davon,\ ob\ im\ Woerterbuch\ Gross-\ und\ Kleinschreibung\ vorhanden\ ist,\ \r\n\ liefert\ dieses\ Methode\ nur\ Worte\ in\ Grossbuchstaben.\ Der\ Buchstabe\ \u00DF\ wird\ dadurch\r\n\ automatisch\ in\ SS\ umgewandelt.\r\n\ \r\n\ @return\ \ \ Ein\ Wort\ aus\ dem\ Woerterbuch\ in\ Grossbuchstaben.\r\n
+numComments=6

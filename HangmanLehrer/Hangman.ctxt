@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Hangman
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Hangman\ here.\r\n\ \r\n\ @author\ (Ruth\ Bosbach)\ \r\n\ @version\ (1.0)\r\n
+comment1.params=
+comment1.target=Hangman()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Hangman\r\n
+comment2.params=
+comment2.target=void\ neuesWort()
+comment2.text=\r\n\ Holt\ sich\ ein\ zuf\u00E4lliges\ Wort\ aus\ der\ Textdatei\r\n\ woerterbuch.txt\ und\ speichert\ dieses\ im\ Attribut\ wort\ als\ Array\r\n\ In\ jeder\ Zeile\ steht\ ein\ Wort.\r\n
+comment3.params=
+comment3.target=int\ getBuchstabenAnzahl()
+comment4.params=
+comment4.target=char[]\ getGeraten()
+comment5.params=bu
+comment5.target=boolean\ buchstabenVergleich(char)
+comment6.params=pWort
+comment6.target=boolean\ istWortGefunden(java.lang.String)
+comment7.params=
+comment7.target=boolean\ wortVergleich()
+comment8.params=
+comment8.target=boolean\ istSpielBeendet()
+comment9.params=
+comment9.target=int\ getAnzahlVersuche()
+numComments=10

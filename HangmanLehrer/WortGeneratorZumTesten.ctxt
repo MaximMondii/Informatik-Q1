@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=WortGeneratorZumTesten
+comment0.text=\r\n\ Die\ Klasse\ stellt\ Methoden\ zur\ Verwaltung\ der\ Wortlisten\ zur\ Verfuegung.\r\n\ \r\n\ @author\ Udo\ Strang\r\n\ @version\ 201529-2101\r\n
+comment1.params=
+comment1.target=WortGeneratorZumTesten()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ WortLieferant.\r\n\ Als\ Dateiname\ wird\ "Standard.wli"\ gesetzt\ und\ der\ ueberlade\ Konstruktor\ aufgerufen.\r\n
+comment2.params=
+comment2.target=java.lang.String\ liefereWort()
+numComments=3
