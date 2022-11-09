@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Personenmanager
+comment1.params=
+comment1.target=Personenmanager()
+comment2.params=
+comment2.target=void\ personenAusTxtHinzuf\u00FCgen()
+comment3.params=
+comment3.target=List\ getList()
+comment4.params=pName\ Datum
+comment4.target=void\ erstellenUndHinzuf\u00FCgen(java.lang.String,\ java.lang.String)
+comment5.params=pPerson
+comment5.target=void\ hinzuf\u00FCgen(Person)
+comment6.params=
+comment6.target=void\ testlisteAnlegen()
+comment7.params=pName
+comment7.target=void\ entfernen(java.lang.String)
+numComments=8
