@@ -7,7 +7,10 @@ public class Person
 {
     private String name; 
     private Date geburtstag;
+<<<<<<< HEAD
     private String geburtstagString;
+=======
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
     Calendar calendar = new GregorianCalendar();
     SimpleDateFormat dateFormat = new SimpleDateFormat("d MMMM, yyyy");
     public Person(String pName, String Datum)
@@ -21,7 +24,10 @@ public class Person
         calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(tag));
         geburtstag = calendar.getTime();
         name = pName; 
+<<<<<<< HEAD
         geburtstagString = Datum;
+=======
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
     }
     public String getName()
     {
@@ -31,10 +37,13 @@ public class Person
     {
         System.out.println(dateFormat.format(calendar.getTime()));
     }
+<<<<<<< HEAD
     public String geburtstagAlsString()
     {
         return geburtstagString;
     }
+=======
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
     public Date getDate()
     {
         return geburtstag;

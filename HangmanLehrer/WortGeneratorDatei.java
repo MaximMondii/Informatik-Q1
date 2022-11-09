@@ -7,7 +7,7 @@ import java.io.*;
  * @author Rudolf Silberberg
  * @version 20081203
  */
-public class txtBearbeitung
+public class WortGeneratorDatei
 {
     // Instanzvariablen
     private String dateiName;
@@ -18,7 +18,7 @@ public class txtBearbeitung
      * 
      * @param   dN Name der Wortdatei
      */
-    public txtBearbeitung(String dN) {
+    public WortGeneratorDatei(String dN) {
         dateiName = new String(dN);
         wortZahl = 0;
         try {
@@ -38,8 +38,8 @@ public class txtBearbeitung
      * Konstruktor für Objekte der Klasse WortLieferant.
      * Als Dateiname wird "woerterbuch.txt gesetzt und der ueberlade Konstruktor aufgerufen.
      */
-    public txtBearbeitung() {
-        this("pedro.txt");
+    public WortGeneratorDatei() {
+        this("woerterbuch.txt");
     }
     
     /**
@@ -80,30 +80,21 @@ public class txtBearbeitung
      * 
      * @return   Ein Wort aus dem Woerterbuch in Grossbuchstaben.
      */
-<<<<<<< HEAD
-    public void personenErstellen() {
-        for (int i = 1; i > wortZahl; i++)
-        {
-            
-            
-=======
-    public Person[] personenErstellen() {
-        
-        for (int i = 1; i > wortZahl; i++)
-        {
-            try {
+    public String liefereWort() {
+        String wort = new String("");
+        try {
             BufferedReader br = new BufferedReader(new FileReader(dateiName));
-            Person person = new Person(br.readLine().substring(0, br.readLine().indexOf(",")),br.readLine().substring(br.readLine().indexOf(","),br.readLine().length()));
+            int zeile = (int)(Math.random()*(wortZahl));
+            ++zeile;
+            for (int i = 1; i <= zeile; ++i) {
+                wort = br.readLine();
+            }
             br.close();
-            String[] personenName = br.readLine().substring(0, br.readLine().indexOf(","));
-            String[] personenDaten = br.readLine().substring(br.readLine().indexOf(","),br.readLine().length());
-
-            }
-            catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Fehler beim Lesen der Datei: \n"
-                +e.getMessage(), "FEHLER", JOptionPane.ERROR_MESSAGE);
-            }
->>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
         }
+        catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "Fehler beim Lesen der Datei: \n"
+                +e.getMessage(), "FEHLER", JOptionPane.ERROR_MESSAGE);
+        }
+        return(wort.toUpperCase());
     }
 }

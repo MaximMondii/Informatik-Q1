@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=Pablo
 dependency1.to=Personenmanager
 dependency1.type=UsesDependency
@@ -45,6 +46,51 @@ package.frame.height=1056
 package.frame.width=1936
 package.numDependencies=10
 package.numTargets=9
+=======
+dependency1.from=ListGUI
+dependency1.to=List
+dependency1.type=UsesDependency
+dependency2.from=Starter
+dependency2.to=List
+dependency2.type=UsesDependency
+dependency3.from=Starter
+dependency3.to=ListGUI
+dependency3.type=UsesDependency
+dependency4.from=Personenmanager
+dependency4.to=List
+dependency4.type=UsesDependency
+dependency5.from=Personenmanager
+dependency5.to=Person
+dependency5.type=UsesDependency
+dependency6.from=Pablo
+dependency6.to=Personenmanager
+dependency6.type=UsesDependency
+dependency7.from=Pablo
+dependency7.to=ListGUI
+dependency7.type=UsesDependency
+dependency8.from=Pablo
+dependency8.to=List
+dependency8.type=UsesDependency
+dependency9.from=Pablo
+dependency9.to=Person
+dependency9.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=552
+editor.fx.0.y=100
+objectbench.height=340
+objectbench.width=934
+package.divider.horizontal=0.6
+package.divider.vertical=0.6335797254487856
+package.editor.height=593
+package.editor.width=823
+package.editor.x=0
+package.editor.y=0
+package.frame.height=1047
+package.frame.width=974
+package.numDependencies=9
+package.numTargets=6
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -58,15 +104,25 @@ target1.name=Pablo
 target1.showInterface=false
 target1.type=UnitTestTargetJunit5
 target1.width=120
+<<<<<<< HEAD
 target1.x=490
 target1.y=480
+=======
+target1.x=480
+target1.y=360
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
 target2.height=70
 target2.name=Personenmanager
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=140
+<<<<<<< HEAD
 target2.x=670
 target2.y=320
+=======
+target2.x=640
+target2.y=230
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
 target3.height=70
 target3.name=List
 target3.showInterface=false
@@ -75,6 +131,7 @@ target3.width=150
 target3.x=320
 target3.y=10
 target4.height=70
+<<<<<<< HEAD
 target4.name=GUI
 target4.showInterface=false
 target4.type=ClassTarget
@@ -83,10 +140,21 @@ target4.x=200
 target4.y=260
 target5.height=70
 target5.name=txtBearbeitung
+=======
+target4.name=Starter
+target4.showInterface=false
+target4.type=ClassTarget
+target4.width=120
+target4.x=640
+target4.y=70
+target5.height=70
+target5.name=ListGUI
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=120
 target5.x=80
+<<<<<<< HEAD
 target5.y=450
 target6.height=70
 target6.name=Starter
@@ -115,3 +183,13 @@ target9.type=TextTarget
 target9.width=120
 target9.x=80
 target9.y=350
+=======
+target5.y=130
+target6.height=70
+target6.name=Person
+target6.showInterface=false
+target6.type=ClassTarget
+target6.width=120
+target6.x=270
+target6.y=290
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85

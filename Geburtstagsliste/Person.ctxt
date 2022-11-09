@@ -7,9 +7,16 @@ comment2.target=java.lang.String\ getName()
 comment3.params=
 comment3.target=void\ DateMitPrintln()
 comment4.params=
+<<<<<<< HEAD
 comment4.target=java.lang.String\ geburtstagAlsString()
 comment5.params=
 comment5.target=java.util.Date\ getDate()
 comment6.params=
 comment6.target=java.lang.String\ toString()
 numComments=7
+=======
+comment4.target=java.util.Date\ getDate()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
+>>>>>>> effb5b8b9b4957d5dab08fa387990d2e90452f85
