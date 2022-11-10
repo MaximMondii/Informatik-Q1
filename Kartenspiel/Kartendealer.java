@@ -198,6 +198,52 @@ public class Kartendealer
             }
         }
     }
+    public void mehrRotOderSchwarz(int bereich)
+    {
+        int schwarz = 0;
+        int rot = 0;
+        deck.toFirst();
+        if(bereich > length() || bereich < 0)
+        {
+            System.out.println("Der Bereich ist nicht so gut gewählt");    
+        }else
+        {
+            for(int i = 0; i < bereich; i++)
+            {
+                if(deck.getContent().getFarbe().equals("Pik") || deck.getContent().getFarbe().equals("Kreuz"))
+                {
+                    schwarz++;
+                }
+                if(deck.getContent().getFarbe().equals("Karo") || deck.getContent().getFarbe().equals("Herz"))
+                {
+                    rot++;
+                }
+                deck.next();
+            }
+        }
+        if(schwarz > rot)
+        {
+            System.out.println("Schwarz ist größer");
+        }
+        else
+        {
+            System.out.println("Rot ist größer");
+        }
+    }
+    public boolean vorhanden(String pFarbe, String pZahl)
+    {
+        boolean b = false;
+        deck.toFirst();
+        for(int i = 0; i < length(); i++)
+        {
+            if(deck.getContent().getFarbe().equals(pFarbe) && deck.getContent().getZahl().equals(pZahl))
+            {
+                b = true;
+            }
+            deck.next();
+        }
+        return b;
+    }
     public void aussortierenFarbe(String pFarbe)
     {   
         List<Karte> temp = new List<Karte>();
