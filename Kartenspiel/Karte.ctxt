@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Karte
+comment1.params=pZahl\ pFarbe
+comment1.target=Karte(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getZahl()
+comment3.params=
+comment3.target=java.lang.String\ getFarbe()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

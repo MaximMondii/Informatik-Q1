@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Kartendealer
+comment1.params=
+comment1.target=Kartendealer()
+comment2.params=Deck
+comment2.target=void\ kartendeckErstellen(List)
+comment3.params=pFarbe
+comment3.target=void\ aussortierenFarbe(java.lang.String)
+comment4.params=
+comment4.target=int\ length()
+comment5.params=
+comment5.target=void\ mischen()
+comment6.params=
+comment6.target=void\ mischenEinMal()
+comment7.params=
+comment7.target=List\ getDeck()
+numComments=8
