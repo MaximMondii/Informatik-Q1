@@ -223,11 +223,11 @@ public class Kartendealer
         }
         if(schwarz > rot)
         {
-            System.out.println("Schwarz ist größer");
+            System.out.println("Schwarz hat mehr Karten");
         }
         else
         {
-            System.out.println("Rot ist größer");
+            System.out.println("Rot hat mehr Karten");
         }
     }
     public boolean vorhanden(String pFarbe, String pZahl)
@@ -253,7 +253,7 @@ public class Kartendealer
         {
             String f;
             f = deck.getContent().getFarbe();
-            System.out.println(f);
+            //System.out.println(f);
             if(pFarbe.equals(f))
             {
               

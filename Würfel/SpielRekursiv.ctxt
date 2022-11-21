@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=SpielRekursiv
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ SpielRekursiv.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=pWuerfel
+comment1.target=SpielRekursiv(Wuerfel)
+comment2.params=
+comment2.target=Wuerfel\ getWuerfel()
+comment3.params=x
+comment3.target=int\ addierenX(int)
+comment4.params=x
+comment4.target=int\ maxFinden(int)
+comment5.params=x
+comment5.target=java.lang.String\ gibXErgebnisse(int)
+numComments=6

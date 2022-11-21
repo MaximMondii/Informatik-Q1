@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Wuerfel
+comment1.params=pSeiten
+comment1.target=Wuerfel(int)
+comment2.params=
+comment2.target=int\ wuerfeln()
+comment3.params=
+comment3.target=int\ gibSeiten()
+numComments=4

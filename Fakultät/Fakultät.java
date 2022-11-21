@@ -24,14 +24,14 @@ public class Fakultät
     }
     public int fakRekursivMitZeit(int n)
     {
-        int o;
+        int o = 0;
         long startTime = System.nanoTime();
         o = fakRekursiv(n);
         long endTime = System.nanoTime();
         long timeElapsed = endTime - startTime;
         System.out.println("Execution time in nanoseconds: " + timeElapsed);
         System.out.println("Execution time in milliseconds: " + timeElapsed / 1000000);
-        return 0;
+        return o;
     }
         
     public int fakRekursiv(int n)

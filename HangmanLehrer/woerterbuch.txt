@@ -1,5 +1,2 @@
-List
-Stack
-Queue
-Hangman
-Exceptionhandling
+Welp
+Kartoffelsuppenmischlingswesen
