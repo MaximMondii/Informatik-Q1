@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Labyrinth
+comment0.text=\r\n\ Labyrinth\r\n
+comment1.params=dim
+comment1.target=Labyrinth(int)
+comment1.text=\r\n\ Konstruktor\ fuer\ Objekte\ der\ Klasse\ Labyrinth\r\n
+comment2.params=
+comment2.target=int\ getDimension()
+comment2.text=\r\n\ Dimension\ wird\ zur\u00FCckgegeben\r\n\ \r\n\ @return\ Anzahl\ der\ Zeilen\ bzw.\ Spalten\ des\ Labyrinths\r\n
+comment3.params=p
+comment3.target=void\ init(double)
+comment3.text=\r\n\ Erzeugt\ ein\ neues\ zuf\u00E4lliges\ Labyrinth\r\n\ 0\:\ freies\ Feld\r\n\ 1\:\ Wand\r\n\ 3\:\ Feld,\ welches\ Theseus\ schon\ betreten\ hat\r\n\ 4\:\ Feld,\ welches\ nicht\ zum\ Ziel\ f\u00FChrt\r\n\ \r\n\ @param\ \ p\tWahrscheinlichkeit,\ mit\ der\ ein\ Feld\ eine\ Wand\ ist\r\n
+comment4.params=x\ y
+comment4.target=int\ getStatus(int,\ int)
+comment4.text=\r\n\ R\u00FCckgabe\ des\ Status\ eines\ Feldes\r\n\ \r\n\ @param\ \ x\ x-Koordinate\ des\ Feldes\r\n\ @param\ \ y\ty-Koordinate\ des\ Feldes\r\n\ @return\ Status\ eines\ Feldes\ (siehe\ Beschreibung\ von\ init)\r\n
+comment5.params=x\ y\ status
+comment5.target=void\ setStatus(int,\ int,\ int)
+comment5.text=\r\n\ Status\ eines\ Feldes\ setzen\r\n\ (siehe\ Beschreibung\ von\ init)\r\n\ \r\n\ @param\ \ x\ x-Koordinate\ des\ Feldes\r\n\ @param\ \ y\ty-Koordinate\ des\ Feldes\r\n
+comment6.params=sicht
+comment6.target=void\ meldeAn(ILabyrinthView)
+comment6.text=\r\n\ Sicht\ anmelden\r\n\ \r\n\ @param\ \ sicht\ \ \ \ \ Sicht\ die\ angemeldet\ wird\r\n
+numComments=7

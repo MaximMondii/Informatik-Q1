@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Theseus
+comment0.text=\r\n\ Theseus\ sucht\ den\ Weg\ aus\ dem\ Labyrinth\r\n
+comment1.params=
+comment1.target=Theseus()
+comment1.text=\r\n\ Konstruktor\ fuer\ Objekte\ der\ Klasse\ Theseus\r\n
+comment2.params=
+comment2.target=void\ neu()
+comment2.text=\r\n\ Es\ wird\ ein\ neues\ Labyrinth\ erstellt.\r\n
+comment3.params=
+comment3.target=void\ run()
+comment3.text=\r\n\ Theseus\ sucht\ den\ Ausgang\r\n
+comment4.params=x\ y
+comment4.target=boolean\ sucheRek(int,\ int)
+comment4.text=\r\n\ Theseus\ sucht\ den\ Ausgang\ mittels\ Rekursion\r\n
+comment5.params=e
+comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.text=\r\n\ Reagiere\ auf\ die\ Maus\r\n
+comment6.params=
+comment6.target=void\ warte()
+comment6.text=\r\n\ Theseus\ verharrt\ kurz\!\r\n
+numComments=7

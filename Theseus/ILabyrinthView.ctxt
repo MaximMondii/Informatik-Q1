@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=ILabyrinthView
+comment0.text=\r\n\ Interface\ f\u00FCr\ Sichten\ des\ Labyrinths\r\n
+comment1.params=
+comment1.target=void\ zeigeAlles()
+comment2.params=x\ y
+comment2.target=void\ zeige(int,\ int)
+numComments=3
