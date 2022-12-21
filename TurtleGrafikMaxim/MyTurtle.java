@@ -47,7 +47,66 @@ public class MyTurtle extends Turtle
             move(length/2);
           
         }
-        
+    }
+    
+    public void baumBaum(int Anzahl, double length)
+    {   
+        if(Anzahl >= 0){
+        //setDirection(270);
+        move(length);
+        double temp = getDirection();
+        turn(45);
+        move(length*0.75); // erster Ast
+        baumBaum(Anzahl-1, length/2);
+        turn(180);
+        move(length*0.75);
+        setDirection(temp);
+        turn(-45);
+        move(length*0.75); // zweiter Ast
+        baumBaum(Anzahl-1, length/2);
+        turn(180);
+        move(length*0.75);
+        setDirection(temp);
+        turn(180);
+        move(length);
+        turn(180);
+        }
+    }
+    
+        public void doppelBaum(int Anzahl, double length)
+    {   
+        if(Anzahl >= 0){
+            //setDirection(270);
+            move(length);
+            double temp = getDirection();
+            turn(45);
+            move(length*0.75); // erster Ast
+            if(Anzahl-1 >= 0){
+                turn(45);
+                doppelBaum(Anzahl-1, length/2);
+                turn(-90);
+                doppelBaum(Anzahl-1, length/2);
+                turn(45);
+            }
+            turn(180);
+            move(length*0.75);
+            setDirection(temp);
+            turn(-45);
+            move(length*0.75); // zweiter Ast
+            if(Anzahl-1 >= 0){
+                turn(45);
+                doppelBaum(Anzahl-1, length/2);
+                turn(-90);
+                doppelBaum(Anzahl-1, length/2);
+                turn(45);
+            }
+            turn(180);
+            move(length*0.75);
+            setDirection(temp);
+            turn(180);
+            move(length);
+            turn(180);
+        }
     }
     
     
