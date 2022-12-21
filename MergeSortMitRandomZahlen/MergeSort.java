@@ -3,15 +3,15 @@ public class MergeSort {
     public static void main(String[] args) {
         int temp;
         int[] arr = new int[20];
-        for(int i = 0; i < arr.length; i++)
+        for(int i = 0; i < arr.length; i++)  //Random Array
         {
              temp = (int)(Math.random() * 999) + 1;
              arr[i] = temp;
         }
 
-        int[] merged = mergeSort(arr, 0, arr.length - 1);
+        int[] merged = mergeSort(arr, 0, arr.length - 1); //Start
 
-        for (int val : merged) {
+        for (int val : merged) {  //Wiedergabe
             String newline = System.getProperty("line.separator");
             System.out.print(val + " " + newline);
         }
@@ -26,20 +26,20 @@ public class MergeSort {
         int j = 0;
         int k = 0;
 
-        while (i < one.length && j < two.length) {
+        while (i < one.length && j < two.length) { // Array größer als zwei
 
             if (one[i] < two[j]) {
                 sorted[k] = one[i];
                 k++;
                 i++;
-            } else {
+            } else { 
                 sorted[k] = two[j];
                 k++;
                 j++;
             }
         }
 
-        if (i == one.length) {
+        if (i == one.length) { // two ist eine Zahl
 
             while (j < two.length) {
                 sorted[k] = two[j];
@@ -48,7 +48,7 @@ public class MergeSort {
             }
         }
 
-        if (j == two.length) {
+        if (j == two.length) { // one ist eine Zahl
 
             while (i < one.length) {
                 sorted[k] = one[i];
@@ -63,7 +63,7 @@ public class MergeSort {
 
     public static int[] mergeSort(int[] arr, int min, int max) {
 
-        if (min == max) {
+        if (min == max) { // Wenn der Array eins groß ist
             int[] br = new int[1];
             br[0] = arr[min];
 
@@ -75,7 +75,7 @@ public class MergeSort {
         int[] fh = mergeSort(arr, min, mid);
         int[] sh = mergeSort(arr, mid + 1, max);
 
-        int[] merged = mergeTwoSortedArrays(fh, sh);
+        int[] merged = mergeTwoSortedArrays(fh, sh); //halbierte Arrays werden weitergegeben
 
         return merged;
     }

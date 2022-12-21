@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=MyTurtle
+comment0.text=\r\n\ Turtle\ mit\ Zeitverzoegerung\ bei\ der\ Bewegung\r\n\ \r\n\ @author\ (HB)\ \r\n\ @version\ (1.1)\r\n
+comment1.params=
+comment1.target=MyTurtle()
+comment1.text=\r\n\ Konstruktor\r\n
+comment2.params=length
+comment2.target=void\ quadrat(double)
+comment3.params=Anzahl\ length
+comment3.target=void\ quadratBaum(int,\ double)
+comment4.params=distance
+comment4.target=void\ move(double)
+comment4.text=\r\n\ Spezielle\ Version\ von\ move\ mit\ Zeitverzoegerung\r\n\ \r\n\ @param\ distance\ Distanz\r\n
+comment5.params=degrees
+comment5.target=void\ turn(double)
+comment5.text=\r\n\ Spezielle\ Version\ von\ turn\ mit\ Zeitverzoegerung\r\n\ \r\n\ @param\ degrees\ Winkel\r\n
+comment6.params=distance
+comment6.target=void\ move(int)
+comment6.text=\r\n\ Spezielle\ Version\ von\ move\ mit\ Zeitverzoegerung\r\n\ \r\n\ @param\ distance\ Distanz\r\n
+comment7.params=degrees
+comment7.target=void\ turn(int)
+comment7.text=\r\n\ Spezielle\ Version\ von\ turn\ mit\ Zeitverzoegerung\r\n\ \r\n\ @param\ degrees\ Winkel\r\n
+comment8.params=distance
+comment8.target=void\ moveBackwards(double)
+comment8.text=\r\n\ fahre\ zur\u00FCck\r\n
+numComments=9

@@ -1,0 +1,42 @@
+Class documentation
+<---- javadoc command: ---->
+D:\programme\Greenfoot-windows-361\Greenfoot\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-protected
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+11
+-classpath
+D:\programme\Greenfoot-windows-361\greenfoot\lib\extensions\greenfoot.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\bluejcore.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\bluejeditor.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\bluejext.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\junit-4.11.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\hamcrest-core-1.3.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\bluej.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\classgraph-4.2.6.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\diffutils-1.2.1.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\commons-logging-api-1.1.2.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\jl1.0.1.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\opencsv-2.3.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\xom-1.2.9.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\lang-stride.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\nsmenufx-2.1.4.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\richtextfx-fat-0.9.0.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\guava-17.0.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\httpclient-4.1.1.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\httpcore-4.1.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\httpmime-4.1.1.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.base.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.controls.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.fxml.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.graphics.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.media.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.properties.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.swing.jar;D:\programme\Greenfoot-windows-361\greenfoot\lib\javafx\lib\javafx.web.jar;D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik
+-d
+D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\MyTurtle.java
+<---- end of javadoc command ---->
+Loading source file D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\MyTurtle.java...
+Constructing Javadoc information...
+warning: unknown enum constant Tag.Any
+  reason: class file for threadchecker.Tag not found
+warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
+Standard Doclet version 11.0.2
+Building tree for all the packages and classes...
+Generating D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\doc\MyTurtle.html...
+Generating D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\doc\package-summary.html...
+Generating D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\doc\allclasses.html...
+Generating D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\doc\allclasses.html...
+Generating D:\OHG\Q1_2021\3_Algorithmen\TurtleGrafik\doc\index.html...
+4 warnings
