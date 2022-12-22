@@ -14,7 +14,32 @@ public class MyTurtle extends Turtle
     public MyTurtle(){
         penDown();
     }
-    
+
+    public  void dreieckInDreieck(int length)
+    {
+        if (length <= 10)
+        {
+           return; 
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            dreieckInDreieck(length / 2);
+            turn(-120);
+            move(length);
+        }
+    }
+
+    public void infinityTest(int Anzahl, double length)
+    {
+        if(Anzahl >= 0)
+        {
+            //setLocation(400, 300);
+            quadrat(length);
+            turn(90);
+            infinityTest(Anzahl-1, length*1.001);
+        }
+    }
+
     public void quadrat(double length)
     {
         penDown();
@@ -24,8 +49,7 @@ public class MyTurtle extends Turtle
             turn(90);
         }
     }
-    
-    
+
     public void quadratBaum(int Anzahl, double length)
     {
         if(Anzahl >= 0)
@@ -45,35 +69,35 @@ public class MyTurtle extends Turtle
             move(length);
             turn(-90);
             move(length/2);
-          
+
         }
     }
-    
+
     public void baumBaum(int Anzahl, double length)
     {   
         if(Anzahl >= 0){
-        //setDirection(270);
-        move(length);
-        double temp = getDirection();
-        turn(45);
-        move(length*0.75); // erster Ast
-        baumBaum(Anzahl-1, length/2);
-        turn(180);
-        move(length*0.75);
-        setDirection(temp);
-        turn(-45);
-        move(length*0.75); // zweiter Ast
-        baumBaum(Anzahl-1, length/2);
-        turn(180);
-        move(length*0.75);
-        setDirection(temp);
-        turn(180);
-        move(length);
-        turn(180);
+            //setDirection(270);
+            move(length);
+            double temp = getDirection();
+            turn(45);
+            move(length*0.75); // erster Ast
+            baumBaum(Anzahl-1, length/2);
+            turn(180);
+            move(length*0.75);
+            setDirection(temp);
+            turn(-45);
+            move(length*0.75); // zweiter Ast
+            baumBaum(Anzahl-1, length/2);
+            turn(180);
+            move(length*0.75);
+            setDirection(temp);
+            turn(180);
+            move(length);
+            turn(180);
         }
     }
-    
-        public void doppelBaum(int Anzahl, double length)
+
+    public void doppelBaum(int Anzahl, double length)
     {   
         if(Anzahl >= 0){
             //setDirection(270);
@@ -108,8 +132,7 @@ public class MyTurtle extends Turtle
             turn(180);
         }
     }
-    
-    
+
     /**
      * Spezielle Version von move mit Zeitverzoegerung
      * 
@@ -119,7 +142,7 @@ public class MyTurtle extends Turtle
         Greenfoot.delay(1);
         super.move(distance);
     }
-    
+
     /**
      * Spezielle Version von turn mit Zeitverzoegerung
      * 
@@ -129,7 +152,7 @@ public class MyTurtle extends Turtle
         Greenfoot.delay(1);
         super.turn(degrees);
     }
-    
+
     /**
      * Spezielle Version von move mit Zeitverzoegerung
      * 
@@ -139,7 +162,7 @@ public class MyTurtle extends Turtle
         Greenfoot.delay(1);
         super.move(distance);
     }
-    
+
     /**
      * Spezielle Version von turn mit Zeitverzoegerung
      * 
@@ -149,7 +172,7 @@ public class MyTurtle extends Turtle
         Greenfoot.delay(1);
         super.turn(degrees);
     }
-    
+
     /**
      * fahre zurück
      */
