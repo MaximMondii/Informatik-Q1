@@ -1,8 +1,8 @@
 #Greenfoot project file
 class.Turtle.image=Turtle.png
-editor.fx.0.height=1047
-editor.fx.0.width=974
-editor.fx.0.x=953
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
 editor.fx.0.y=0
 height=785
 package.numDependencies=0
