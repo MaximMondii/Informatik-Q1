@@ -3,17 +3,17 @@ import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Photo {
+public class Photo implements Comparable<Photo>{
     private char orientation;
     private int numberTags;
     private String [] tags;
     private int id; //number of the photo in the photocollection file d_pet_pictures.txt
 
-
     public Photo(char orientation, String[] tags) {
         this.orientation = orientation;
         this.tags = tags;
     }
+
     public Photo(String line){
         String [] params = line.split(" ");
         orientation = params[0].charAt(0);
@@ -54,6 +54,10 @@ public class Photo {
 
     public void setTags(String[] tags) {
         this.tags = tags;
+    }
+
+    public int compareTo(Photo photo) {
+        return this.numberTags - photo.getNumberTags();
     }
 
     public boolean hasTag(String tag){
@@ -107,7 +111,7 @@ public class Photo {
         tagsPhoto2.trimToSize();
 
         //Kontrollausgabe
-        System.out.println(commonTags.toString());
+        //System.out.println(commonTags.toString());
 
         if (commonTags.size() <= tagsPhoto1.size() && commonTags.size() <= tagsPhoto2.size()){
             return commonTags.size();
@@ -123,19 +127,17 @@ public class Photo {
 
     }
 
-
-
     public static ArrayList<Photo> getPhotosFrom(String filename){
         ArrayList<Photo> list = new ArrayList<Photo>();
         String line;
         Photo photo;
         int numberOfPhotos = 0;
         int numberOfPhotosInFile = 0;
-//dies ist ein try-Block: Wir versuchen eine Datei zu öffnen, wir wissen aber nicht, ob das klappt (die Datei könnte nicht so heißen oder für uns nicht lesbar sein
+        //dies ist ein try-Block: Wir versuchen eine Datei zu öffnen, wir wissen aber nicht, ob das klappt (die Datei könnte nicht so heißen oder für uns nicht lesbar sein
         try {
             BufferedReader br = new BufferedReader(new FileReader(filename));
-//wenn das Öffnen geklappt hat, lesen wir nacheinander immer eine Zeile, bis keine Zeilen mehr in der Datei stehen und wir am Ende angekommen sind.
-//Bei jeder Zeile erhöhen wir die numberOfPhotos
+            //wenn das Öffnen geklappt hat, lesen wir nacheinander immer eine Zeile, bis keine Zeilen mehr in der Datei stehen und wir am Ende angekommen sind.
+            //Bei jeder Zeile erhöhen wir die numberOfPhotos
             //Die Anzehl der Photos vorlesen
             numberOfPhotosInFile = Integer.parseInt(br.readLine());
             while ((line =br.readLine()) != null) {
@@ -144,13 +146,13 @@ public class Photo {
                 list.add(photo);
                 numberOfPhotos++;
             }
-//An Ende schliessen wir die Datei, damit auch andere Programme auf die Datei zugreifen können
+            //An Ende schliessen wir die Datei, damit auch andere Programme auf die Datei zugreifen können
             br.close();
         }
-//Falls irgendein Fehler passiert, öffnen wir ein Popup-Fenster und melden dies dem User.
+        //Falls irgendein Fehler passiert, öffnen wir ein Popup-Fenster und melden dies dem User.
         catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Fehler beim Lesen der Datei: "+ filename +"\n"
-                    +e.getMessage(), "FEHLER", JOptionPane.ERROR_MESSAGE);
+                +e.getMessage(), "FEHLER", JOptionPane.ERROR_MESSAGE);
         }
 
         return list;
@@ -166,22 +168,21 @@ public class Photo {
 
         PrintWriter pWriter = null;
 
-
         try {
-//Wir öffnen die Datei zum Schreiben „Writer“ und zum Anhängen „true“
+            //Wir öffnen die Datei zum Schreiben „Writer“ und zum Anhängen „true“
             //falls die Datei schon bestand, wird Sie gelöscht
             //Zum Anähngen würde man als 2. Parameter append mit dem Wert true belegen
             pWriter = new PrintWriter(new BufferedWriter(new FileWriter(filename)),true);
             pWriter.append(list.size()+ "\n");
             for (Photo p:list) {
 
-                pWriter.append(p.getId() + " " + p  + "\n");
+                pWriter.append(p  + "\n");
             }
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
-//Am Schluss schliessen wir die Datei auf jeden Fall (finally) wieder
+        //Am Schluss schliessen wir die Datei auf jeden Fall (finally) wieder
         finally {
             if (pWriter != null){
                 pWriter.flush();

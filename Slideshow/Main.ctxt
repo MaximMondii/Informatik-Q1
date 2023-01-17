@@ -1,7 +1,13 @@
 #BlueJ class context
 comment0.target=Main
 comment1.params=
-comment1.target=void\ sortTags()
-comment2.params=A\ B
-comment2.target=void\ swap(Photo,\ Photo)
-numComments=3
+comment1.target=int\ main()
+comment2.params=
+comment2.target=int\ mainTheSecond()
+comment3.params=sortedPhotos
+comment3.target=int\ maximizeInterestFactor(java.util.List)
+comment4.params=
+comment4.target=int\ test()
+comment5.params=
+comment5.target=void\ sort()
+numComments=6
