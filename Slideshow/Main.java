@@ -17,7 +17,7 @@ public class Main
         }
         return interest;
     }
-    
+
     public static int mainTheSecond() {
         //Liste von Photos einlesen in die ArrayList photos
         ArrayList<Photo> photos = Photo.getPhotosFrom("d_pet_pictures.txt");
@@ -27,10 +27,22 @@ public class Main
         return interestFactor;
     }
 
+    public static int mainTheThrid(int S) {
+        //Liste von Photos einlesen in die ArrayList photos
+        ArrayList<Photo> photos = Photo.getPhotosFrom("d_pet_pictures.txt");
+        sort();
+        List<Photo> sortedPhotos = Photo.getPhotosFrom("output_beispiel.txt");
+        int windowSize = S;
+        int interestFactor = maximizeInterestFactor2(sortedPhotos, windowSize);
+        System.out.println("Maximized Interest Factor: " + interestFactor);
+
+        return interestFactor;
+    }
+
     public static int maximizeInterestFactor(List<Photo> sortedPhotos) {
         List<Photo> slideshow = new ArrayList<>();
         int interestFactor = 0;
-        Photo lastAdded = sortedPhotos.get(0); // start with the first photo
+        Photo lastAdded = sortedPhotos.get(0);
         slideshow.add(lastAdded);
         for (int i = 1; i < sortedPhotos.size(); i++) {
             Photo current = sortedPhotos.get(i);
@@ -52,11 +64,19 @@ public class Main
         return interestFactor;
     }
 
-    public static int test()
-    {
-        sort();
-        ArrayList<Photo> sorted = Photo.getPhotosFrom("output_beispiel.txt");
-        return sorted.get(3).getInterestFactor(sorted.get(4));
+    public static int maximizeInterestFactor2(List<Photo> sortedPhotos, int windowSize) {
+        int interestFactor = 0;
+        for (int i = 0; i < sortedPhotos.size() - windowSize; i++) {
+            int maxInterest = 0;
+            for (int j = i; j < i + windowSize; j++) {
+                for (int k = j + 1; k < i + windowSize; k++) {
+                    int interest = sortedPhotos.get(j).getInterestFactor(sortedPhotos.get(k));
+                    maxInterest = Math.max(maxInterest, interest);
+                }
+            }
+            interestFactor += maxInterest;
+        }
+        return interestFactor;
     }
 
     public static void sort() 
