@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Motto
+comment1.params=title
+comment1.target=Motto(java.lang.String)
+comment10.params=evt
+comment10.target=void\ jbRangliste_ActionPerformed(java.awt.event.ActionEvent)
+comment11.params=f
+comment11.target=void\ fontSetzen(java.awt.Font)
+comment12.params=args
+comment12.target=void\ main(java.lang.String[])
+comment2.params=evt
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=evt
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=evt
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=evt
+comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment6.params=evt
+comment6.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment7.params=evt
+comment7.target=void\ jbEintragen_ActionPerformed(java.awt.event.ActionEvent)
+comment8.params=evt
+comment8.target=void\ jbVerbinden_ActionPerformed(java.awt.event.ActionEvent)
+comment9.params=evt
+comment9.target=void\ jbUebersicht_ActionPerformed(java.awt.event.ActionEvent)
+numComments=13

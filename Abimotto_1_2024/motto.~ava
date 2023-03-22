@@ -1,0 +1,126 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import java.sql.*;
+
+
+public class motto extends JFrame {
+  // Anfang Attribute
+  private DatabaseConnector dbConnector;
+  private JTextField tVorname = new JTextField();
+  private JTextField tName = new JTextField();
+  private JTextField tMotto = new JTextField();
+  private JButton jbEintragen = new JButton();
+  private JTextArea jtaAusgabe = new JTextArea("");
+    private JScrollPane jtaAusgabeScrollPane = new JScrollPane(jtaAusgabe);
+  private JLabel jLabel1 = new JLabel();
+  // Ende Attribute
+  
+  public motto(String title) {
+    // Frame-Initialisierung
+    super(title);
+    setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+    int frameWidth = 797; 
+    int frameHeight = 378;
+    setSize(frameWidth, frameHeight);
+    Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+    int x = (d.width - getSize().width) / 2;
+    int y = (d.height - getSize().height) / 2;
+    setLocation(x, y);
+    Container cp = getContentPane();
+    cp.setLayout(null);
+    // Anfang Komponenten
+    
+    tVorname.setBounds(16, 48, 105, 24);
+    tVorname.setText("Vorname");
+    cp.add(tVorname);
+    tName.setBounds(136, 48, 105, 24);
+    tName.setText("Name");
+    cp.add(tName);
+    tMotto.setBounds(16, 80, 225, 24);
+    tMotto.setText("Mottovorschlag");
+    cp.add(tMotto);
+    jbEintragen.setBounds(16, 112, 227, 25);
+    jbEintragen.setText("Mottovorschlag einreichen/wählen");
+    jbEintragen.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+        jbEintragen_ActionPerformed(evt);
+      }
+    });
+    cp.add(jbEintragen);
+    jtaAusgabeScrollPane.setBounds(272, 48, 489, 281);
+    cp.add(jtaAusgabeScrollPane);
+    setTitle("AbiMotto");
+    jLabel1.setBounds(16, 8, 682, 20);
+    jLabel1.setText("Bitte starten Sie zuerst den Apache-Server und die MySQL-Datenbank. Importieren Sie dann die Datenbank abimotte.sql.");
+    cp.add(jLabel1);
+    // Ende Komponenten
+    
+    setResizable(false);
+    setVisible(true);     
+    dbConnector = new DatabaseConnector("localhost", 3306, "abimotto", "root", "");
+    String fehler = dbConnector.getErrorMessage();
+    if (fehler == null) {
+      jLabel1.setText("Kein Fehler, Sie können fortfahren");
+    } else {
+      jLabel1.setText("Fehlermeldung: " + fehler);
+    }
+       
+  }
+  
+  // Anfang Methoden
+  public void jbEintragen_ActionPerformed(ActionEvent evt) {
+    String vorname = tVorname.getText();
+    String name = tName.getText();
+    String motto = tMotto.getText();
+      
+    //Hier Quelltext einfügen
+    int userid=-1;
+    dbConnector.executeStatement("SELECT id FROM user WHERE name='"+name+"' AND vorname='"+vorname+"'");
+    QueryResult r = dbConnector.getCurrentQueryResult();
+    if (r.getRowCount() == 0) {
+      dbConnector.executeStatement("INSERT INTO user(name,vorname) VALUES('"+name+"','"+vorname+"')");
+      dbConnector.executeStatement("SELECT id FROM user WHERE name='"+name+"' AND vorname='"+vorname+"'");
+      r = dbConnector.getCurrentQueryResult();
+      userid = Integer.parseInt(r.getData()[0][0]);
+    } else {
+      userid = Integer.parseInt(r.getData()[0][0]);
+    }  
+
+    int mottoid=-1;
+    dbConnector.executeStatement("SELECT mottoid FROM motto WHERE motto='"+motto+"'");
+    r = dbConnector.getCurrentQueryResult();
+    if (r.getRowCount() == 0) {
+      dbConnector.executeStatement("INSERT INTO motto(motto) VALUES('"+motto+"')");
+      dbConnector.executeStatement("SELECT mottoid FROM motto WHERE motto='"+motto+"'");
+      r = dbConnector.getCurrentQueryResult();
+      mottoid = Integer.parseInt(r.getData()[0][0]);
+    } else {
+      mottoid = Integer.parseInt(r.getData()[0][0]);
+    }  
+    
+    dbConnector.executeStatement("SELECT mottoid FROM vorschlag WHERE id='"+userid+"' AND mottoid='"+mottoid+"'");
+    r = dbConnector.getCurrentQueryResult();
+    if (r.getRowCount() != 0) {
+        JOptionPane.showMessageDialog(this,"Eintrag schon vorhanden.","Fehler",JOptionPane.ERROR_MESSAGE); 
+    }else{
+        dbConnector.executeStatement("INSERT INTO vorschlag(id,mottoid) VALUES('"+userid+"','"+mottoid+"')");
+    } 
+      
+    jtaAusgabe.setText("Vorname\tMottovorschlag\n-------------------------------------------------------------------\n");
+    dbConnector.executeStatement("SELECT vorname,motto FROM user JOIN vorschlag USING (id) JOIN motto USING (mottoid)");
+    r = dbConnector.getCurrentQueryResult();
+    for (int i = 0; i < r.getRowCount(); i++) {
+        jtaAusgabe.append(r.getData()[i][0]+"\t"+r.getData()[i][1]+"\n");
+    }
+      
+    //Ende des eigenen Quelltextes
+      
+  }  
+  // Ende Methoden
+  
+  public static void main(String[] args) {
+    new motto("Mottoverwaltung");
+  }
+}

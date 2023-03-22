@@ -75,15 +75,15 @@ public class motto extends JFrame {
   
   // Anfang Methoden
   public void jbEintragen_ActionPerformed(ActionEvent evt) {
-    String vorname = tVorname.getText();
-    String name = tName.getText();
-    String motto = tMotto.getText();
+    String vorname = tVorname.getText().trim();
+    String name = tName.getText().trim();
+    String motto = tMotto.getText().trim();
       
     //Hier Quelltext einfügen
     int userid=-1;
     dbConnector.executeStatement("SELECT id FROM user WHERE name='"+name+"' AND vorname='"+vorname+"'");
     QueryResult r = dbConnector.getCurrentQueryResult();
-    if (r.getRowCount() == 0) {
+    if (r != null && r.getRowCount() == 0) {
       dbConnector.executeStatement("INSERT INTO user(name,vorname) VALUES('"+name+"','"+vorname+"')");
       dbConnector.executeStatement("SELECT id FROM user WHERE name='"+name+"' AND vorname='"+vorname+"'");
       r = dbConnector.getCurrentQueryResult();
@@ -93,11 +93,32 @@ public class motto extends JFrame {
     }  
 //Eintragen des Mottos
     int mottoid=-1;
+    dbConnector.executeStatement("SELECT MottoID FROM Motto WHERE Motto='"+motto+"'");
+    r = dbConnector.getCurrentQueryResult();
+    if (r != null && r.getRowCount() == 0) {
+      dbConnector.executeStatement("INSERT INTO motto(motto) VALUES('"+motto+"')");
+      dbConnector.executeStatement("SELECT MottoID FROM motto WHERE Motto='"+motto+"'");
+      r = dbConnector.getCurrentQueryResult();
+      mottoid = Integer.parseInt(r.getData()[0][0]);
+    } else {
+      mottoid = Integer.parseInt(r.getData()[0][0]);
+    }  
    //Eintragen des Vorschlags
-  
-    //Ausgabe des Resultsets in der JTextArea  
-    jtaAusgabe.setText("Vorname\tMottovorschlag\n-------------------------------------------------------------------\n");
-    //...
+    //Ausgabe des Resultsets in der JTextArea 
+    String Vorname;
+    String Name;
+    String Motto;
+    jtaAusgabe.setText("Vorname\tName\tMottovorschlag\n-------------------------------------------------------------------\n");
+    for(int i = 0; i > mottoid; i++)
+    {
+        dbConnector.executeStatement("SELECT Motto,Vorname,Name FROM motto,user WHERE MottoID='"+i+"'");
+        r = dbConnector.getCurrentQueryResult();
+        Vorname = r.getData()[1][0];
+        Name = r.getData()[2][0];
+        Motto = r.getData()[0][0];
+        jtaAusgabe.setText(Vorname + "\t" + Name + "\t" + Motto + " "); 
+    }
+    
       
           //Ende des eigenen Quelltextes
       
