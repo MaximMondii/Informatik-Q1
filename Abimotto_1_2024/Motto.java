@@ -227,8 +227,21 @@ public class Motto extends JFrame {
     
     
 
-    public void jbRangliste_ActionPerformed(ActionEvent evt){
-        
+    public void jbRangliste_ActionPerformed(ActionEvent evt)
+    {
+        jtaAusgabe.setText("Anzahl\tMottovorschlag\n-------------------------------------------------------------------\n");
+        dbConnector.executeStatement("SELECT count(motto._mottoid) as Anzahl ,motto.motto FROM motto,vorschlag WHERE vorschlag._mottoid = motto._mottoid GROUP BY motto.motto ORDER BY Anzahl desc");
+        QueryResult r = dbConnector.getCurrentQueryResult();
+        if(r == null){
+            jtaAusgabe.setText(dbConnector.getErrorMessage());
+        }
+        else{
+            String [] cols = r.getColumnNames();
+            jtaAusgabe.setText(cols[0] + "\t" + cols[1]+ "\n");
+            for (int i = 0; i < r.getRowCount(); i++) {
+                jtaAusgabe.append(r.getData()[i][0]+"\t"+r.getData()[i][1]+"\n");
+            }
+        }
     }
 
     
