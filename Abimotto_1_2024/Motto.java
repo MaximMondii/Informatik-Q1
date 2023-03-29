@@ -5,6 +5,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.text.BadLocationException;
 import java.sql.*;
+import javax.swing.JFrame;
 
 public class Motto extends JFrame {
     // Anfang Attribute
@@ -95,8 +96,7 @@ public class Motto extends JFrame {
         jbVorschlagAendern.setBounds(16,136 + (3*32), 227 , 25 );
         jbVorschlagAendern.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-               
-
+                jbVorschlagAendern_ActionPerformed(evt);
             }
         });
         cp.add(jbVorschlagAendern);
@@ -118,6 +118,62 @@ public class Motto extends JFrame {
     }
 
     // Anfang Methoden
+    public void jbVorschlagAendern_ActionPerformed(ActionEvent evt)
+    {
+        boolean datensatzVorhanden = false;
+
+        int mottoID = -1, userID = -1;
+        int neuesMottoID = -1;
+        String neuesMotto;
+        //Das alte Motto aus den Textfeldern lesen 
+        //Dies geschieht auch durch einen Dreierclick auf 
+        vorname = tVorname.getText().trim();
+        name = tName.getText().trim();
+        motto = tMotto.getText().trim();
+
+        dbConnector.executeStatement("SELECT user._id,motto._mottoid,vorname, name, motto FROM user JOIN vorschlag USING (_id) JOIN motto USING (_mottoid) where name = '" + name + "' and vorname = '" + vorname +"' and motto = '" + motto + "'");
+        QueryResult r = dbConnector.getCurrentQueryResult();
+        if (r.getRowCount() != 0){
+            //Wir haben einen Datensatz gefunden
+            datensatzVorhanden = true;
+            mottoID = Integer.parseInt(r.getData()[0][1]);
+            userID = Integer.parseInt(r.getData()[0][0]);
+            System.out.println("Datensatz vorhanden: " + mottoID + " " + motto + " " + userID + " " + vorname + " " + name);
+        }
+        //System.out.println("Datensatz vorhanden: " + mottoID + " " + motto + " " + userID + " " + vorname + " " + name + " " + neuesMotto);
+
+        if (datensatzVorhanden){
+            //Frage nach dem neuen Motto
+            neuesMotto = JOptionPane.showInputDialog(this,"Bitte das neue Motto eingeben!");
+
+            dbConnector.executeStatement("SELECT _mottoid FROM motto WHERE motto='"+neuesMotto+"'");
+            r = dbConnector.getCurrentQueryResult();
+            //Das neue Motto wird geprüft
+            //Das neue Motto gibt es noch nicht und es wird eingefügt
+            if (r.getRowCount() == 0) {
+                dbConnector.executeStatement("INSERT INTO motto(motto) VALUES('"+neuesMotto+"')");
+                dbConnector.executeStatement("SELECT _mottoid FROM motto WHERE motto='"+neuesMotto+"'");
+                r = dbConnector.getCurrentQueryResult();
+                neuesMottoID = Integer.parseInt(r.getData()[0][0]);
+                System.out.println("Motto : " + neuesMotto + " " + neuesMottoID + " gab es noch nicht");
+            } else {//das Motto gibt es schon und wir speichern uns die ID
+                neuesMottoID = Integer.parseInt(r.getData()[0][0]);
+                System.out.println("Motto : " + neuesMotto + " " + neuesMottoID + " gibt es schon");
+            }
+
+            dbConnector.executeStatement("UPDATE vorschlag SET _mottoid = " + neuesMottoID + " WHERE _id = " + userID + " AND _mottoid = " + mottoID);
+
+            //dbConnector.executeStatement("SELECT user._id,motto._mottoid,vorname, name, motto FROM user JOIN vorschlag USING (_id) JOIN motto USING (_mottoid) where name = '" + name + "' and vorname = '" + vorname +"' and motto = '" + motto + "'");
+            
+            dbConnector.executeStatement("SELECT user._id,motto._mottoid,vorname, name, motto FROM user JOIN vorschlag USING (_id) JOIN motto USING (_mottoid) where name = '" + name + "' and vorname = '" + vorname +"' and motto = '" + neuesMotto + "'");
+            
+            r = dbConnector.getCurrentQueryResult();
+            if (r.getRowCount() != 0){
+                JOptionPane.showMessageDialog(this,"Der Eintrag von " + r.getData()[0][2] + " " + r.getData()[0][3] + " wurde aktualisiert!","Eintrag wurde aktualisiert.",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }
+    
     public void jbEintragen_ActionPerformed(ActionEvent evt) {
         String vorname = tVorname.getText().trim();
         String name = tName.getText().trim();
